@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Omomati – Support</title>
+  <meta name="description" content="Official support page for Omomati. Get help, contact support, and find FAQs." />
+  <meta property="og:title" content="Omomati – Support" />
+  <meta property="og:description" content="Get help with Omomati. Contact support and read FAQs." />
+  <meta name="theme-color" content="#0ea5e9" />
+<!-- ...existing code... -->
+  <style>
+    :root{
+      --bg: #FFF5F6;                /* Main Background */
+      --card: #FFFFFF;              /* Card Background */
+      --muted: #FF4D67;             /* Secondary Primary (for accents/muted text) */
+      --text: #2d2d2d;              /* Dark text for contrast */
+      --accent: #FF9499;            /* Main Primary */
+      --radius: 16px;
+      --max: 860px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;
+      background: var(--bg);
+      color:var(--text); line-height:1.6; -webkit-font-smoothing:antialiased;
+      display:flex; align-items:flex-start; justify-content:center; padding:32px 16px;
+    }
+    .wrap{width:100%; max-width:var(--max)}
+    header{
+      text-align:center; margin-bottom:24px;
+    }
+    .logo{
+      width:64px; height:64px; border-radius:14px;
+      background:linear-gradient(135deg,#FFFFFF,#FFFFFF);
+      display:inline-grid; place-items:center; color:white; font-weight:800; font-size:24px;
+      box-shadow:0 10px 30px #FF949966;
+    }
+    h1{margin:12px 0 6px; font-size:28px; letter-spacing:.3px}
+    p.sub{margin:0; color:var(--muted)}
+    .card{
+      background: var(--card);
+      border:1px solid #F5F5F5;
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(255,77,103,0.08);
+      padding:20px; margin:12px 0;
+    }
+    h2{font-size:18px; margin:0 0 10px}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    ul{margin:10px 0 0 18px}
+    footer{margin-top:16px; text-align:center; color:var(--muted); font-size:14px}
+    .grid{display:grid; gap:12px}
+    @media (min-width:800px){ .grid{grid-template-columns:1fr 1fr} }
+    .kbd{
+      font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      background:#F5F5F5; border:1px solid #FF9499; border-radius:8px; padding:1px 6px;
+    }
+  </style>
+  <!-- Optional structured data to help SEO & clarity -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Omomati Support",
+    "url":"https://wodoo.github.io/Omomati/", 
+    "publisher":{"@type":"Organization","name":"Omomati"},
+    "potentialAction":{"@type":"SearchAction","target":"https://wodoo.github.io/Omomati/?q={query}","query-input":"required name=query"}
+  }
+  </script>
+</head>
+<body>
+  <main class="wrap">
+ <header>
+      <img src="icon.png" alt="Omomati logo" class="logo" width="64" height="64" style="border-radius:14px; box-shadow:0 10px 30px #FF949966;">
+      <h1>Omomati</h1>
+      <p class="sub">We’re here to help. Find answers, report issues, or contact us directly.</p>
+    </header>
+
+    <section class="grid">
+      <section class="card" aria-labelledby="contact">
+        <h2 id="contact">Contact Us</h2>
+        <p>Email: <a href="mailto:tenence.apps@gmail.com">tenence.apps@gmail.com</a></p>
+        <p>Response time: usually within 1–2 business days.</p>
+      </section>
+
+      <section class="card" aria-labelledby="status">
+        <h2 id="status">App Status</h2>
+        <p>All systems operational.</p>
+        <p>If you’re encountering issues, please include your app version and iOS version.</p>
+      </section>
+    </section>
+
+    <section class="card" aria-labelledby="faq">
+      <h2 id="faq">Frequently Asked Questions</h2>
+      <ul>
+        <li><strong>I found a bug—what should I send?</strong><br />
+          Please email a brief description, steps to reproduce, and (if possible) a screenshot or screen recording.</li>
+        <li><strong>How do I reset my account?</strong><br />
+          Open <span class="kbd">Omomati</span> → <span class="kbd">Settings</span> → <span class="kbd">Account</span> → <span class="kbd">Reset</span>.
+        </li>
+        <li><strong>How can I request a feature?</strong><br />
+          Email us with the subject “Feature Request” and a short explanation of your use case.</li>
+      </ul>
+    </section>
+
+    <section class="grid">
+      <section class="card" aria-labelledby="privacy">
+        <h2 id="privacy">Privacy & Terms</h2>
+        <p>
+          <a href="#" rel="nofollow">Privacy Policy</a> •
+          <a href="#" rel="nofollow">Terms of Service</a>
+        </p>
+        <p>You can host these as separate pages or PDF files and link them here.</p>
+      </section>
+
+      <section class="card" aria-labelledby="about">
+        <h2 id="about">About Omomati</h2>
+        <p>Omomati helps you <em>(short one-liner about the app)</em>. For updates, check the App Store listing.</p>
+      </section>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Omomati. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // Auto year
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
