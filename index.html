@@ -57,6 +57,66 @@
       font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
       background:#F5F5F5; border:1px solid #FF9499; border-radius:8px; padding:1px 6px;
     }
+    .faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-item {
+  border-left: 4px solid #FF9499;
+  padding: 1rem 1.5rem;
+  background: #FFF5F6;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.faq-item:hover {
+  background: #FFECEF;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 148, 153, 0.1);
+}
+
+.faq-question {
+  color: #FF4D67;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+.faq-answer {
+  color: #333333;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.kbd {
+  background: #FF4D67;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', monospace;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .faq-item {
+    padding: 1rem;
+  }
+  
+  .faq-question {
+    font-size: 1rem;
+  }
+  
+  .kbd {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
   </style>
   <!-- Optional structured data to help SEO & clarity -->
   <script type="application/ld+json">
@@ -64,9 +124,9 @@
     "@context":"https://schema.org",
     "@type":"WebSite",
     "name":"Omomati Support",
-    "url":"https://wodoo.github.io/Omomati/", 
+    "url":"https://wodoo.github.io/omomati-page/", 
     "publisher":{"@type":"Organization","name":"Omomati"},
-    "potentialAction":{"@type":"SearchAction","target":"https://wodoo.github.io/Omomati/?q={query}","query-input":"required name=query"}
+    "potentialAction":{"@type":"SearchAction","target":"https://wodoo.github.io/omomati-page/?q={query}","query-input":"required name=query"}
   }
   </script>
 </head>
@@ -92,18 +152,62 @@
       </section>
     </section>
 
-    <section class="card" aria-labelledby="faq">
-      <h2 id="faq">Frequently Asked Questions</h2>
-      <ul>
-        <li><strong>I found a bug—what should I send?</strong><br />
-          Please email a brief description, steps to reproduce, and (if possible) a screenshot or screen recording.</li>
-        <li><strong>How do I reset my account?</strong><br />
-          Open <span class="kbd">Omomati</span> → <span class="kbd">Settings</span> → <span class="kbd">Account</span> → <span class="kbd">Reset</span>.
-        </li>
-        <li><strong>How can I request a feature?</strong><br />
-          Email us with the subject “Feature Request” and a short explanation of your use case.</li>
-      </ul>
-    </section>
+  <section class="card" aria-labelledby="faq">
+  <h2 id="faq">Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h3 class="faq-question">I found a bug—what should I send?</h3>
+      <p class="faq-answer">
+        Please email us a brief description of the issue, steps to reproduce the problem, 
+        and if possible, include a screenshot or screen recording. This helps us identify 
+        and fix the issue faster.
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <h3 class="faq-question">How do I reset my account?</h3>
+      <p class="faq-answer">
+        Open the <span class="kbd">Omomati</span> app → 
+        <span class="kbd">Settings</span> → 
+        <span class="kbd">Account</span> → 
+        <span class="kbd">Reset Account</span>
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <h3 class="faq-question">How can I request a new feature?</h3>
+      <p class="faq-answer">
+        Email us with the subject line "Feature Request" and include a detailed 
+        explanation of your use case and how the feature would help you track 
+        your pregnancy or baby's development.
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <h3 class="faq-question">Is my pregnancy and baby data secure?</h3>
+      <p class="faq-answer">
+        Yes, all your personal data is encrypted and stored securely. We follow 
+        industry-standard security practices to protect your sensitive information.
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <h3 class="faq-question">Can I track multiple pregnancies or babies?</h3>
+      <p class="faq-answer">
+        Absolutely! Omomati supports tracking multiple pregnancies and babies. 
+        You can easily switch between them using the tabs in the main interface.
+      </p>
+    </div>
+    
+    <div class="faq-item">
+      <h3 class="faq-question">How do I export my data?</h3>
+      <p class="faq-answer">
+        Currently, data export is not available, but it's on our roadmap. 
+        Email us if you need your data for any specific reason.
+      </p>
+    </div>
+  </div>
+</section>
 
     <section class="grid">
       <section class="card" aria-labelledby="privacy">
